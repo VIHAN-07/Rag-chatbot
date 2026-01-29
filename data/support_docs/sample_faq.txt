@@ -1,0 +1,60 @@
+# TechSupport Pro - Frequently Asked Questions
+
+## Account & Billing
+
+### How do I reset my password?
+To reset your password, click the "Forgot Password" link on the login page. Enter your registered email address, and you'll receive a password reset link within 5 minutes. If you don't receive the email, please check your spam folder or contact support.
+
+### How can I update my billing information?
+Log into your account, go to Settings > Billing, and click "Update Payment Method." You can add or change your credit card, debit card, or PayPal account. Changes take effect immediately for your next billing cycle.
+
+### What payment methods do you accept?
+We accept Visa, MasterCard, American Express, Discover, and PayPal. For enterprise customers, we also offer invoice-based payment with NET-30 terms.
+
+### How do I cancel my subscription?
+To cancel your subscription, go to Settings > Subscription > Cancel Plan. You'll retain access until the end of your current billing period. No refunds are provided for partial months.
+
+### Can I get a refund?
+We offer a 30-day money-back guarantee for new subscribers. To request a refund, contact support within 30 days of your initial purchase. Refunds are processed within 5-7 business days.
+
+## Product Features
+
+### How do I enable two-factor authentication?
+Go to Settings > Security > Two-Factor Authentication. Choose between SMS, email, or authenticator app verification. We recommend using an authenticator app for the highest security.
+
+### What file formats are supported?
+Our platform supports PDF, DOCX, DOC, TXT, RTF, and HTML file formats. Maximum file size is 25MB for standard accounts and 100MB for premium accounts.
+
+### Is my data encrypted?
+Yes, all data is encrypted both in transit (TLS 1.3) and at rest (AES-256). We use industry-standard security practices and undergo annual security audits.
+
+### Can I export my data?
+Yes, you can export all your data at any time. Go to Settings > Data > Export. You can choose between JSON, CSV, or PDF formats. Large exports may take up to 24 hours to process.
+
+## Technical Support
+
+### My application isn't loading. What should I do?
+First, try clearing your browser cache and cookies. If the issue persists, try using a different browser or incognito mode. Check our status page at status.techsupportpro.com for any ongoing incidents.
+
+### How do I contact technical support?
+You can reach our support team through:
+- Email: support@techsupportpro.com
+- Live Chat: Available 24/7 on our website
+- Phone: 1-800-TECH-PRO (8am-8pm EST, Monday-Friday)
+
+### What browsers are supported?
+We support the latest two versions of Chrome, Firefox, Safari, and Edge. Internet Explorer is not supported. For the best experience, we recommend using Google Chrome.
+
+### How do I report a bug?
+To report a bug, go to Help > Report a Bug. Include a detailed description of the issue, steps to reproduce, and any screenshots. Our team will investigate within 2 business days.
+
+## Privacy & Security
+
+### How is my personal information protected?
+We comply with GDPR, CCPA, and SOC 2 Type II standards. Your personal information is never sold to third parties. See our Privacy Policy for complete details.
+
+### Who has access to my data?
+Only authorized support personnel can access your data, and only when necessary to resolve issues you report. All access is logged and audited.
+
+### How long is my data retained?
+Active account data is retained for the duration of your subscription. After account closure, data is retained for 30 days before permanent deletion. You can request immediate deletion by contacting support.
