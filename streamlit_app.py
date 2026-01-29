@@ -394,6 +394,54 @@ def sidebar_settings():
         
         # Add custom document
         with st.expander("➕ Add Custom Document"):
+            # Option 1: Upload file
+            st.markdown("**📄 Upload Document:**")
+            uploaded_file = st.file_uploader(
+                "Choose a file",
+                type=["txt", "pdf", "docx", "md"],
+                help="Upload TXT, PDF, DOCX, or Markdown files"
+            )
+            if uploaded_file is not None:
+                if st.button("📤 Upload to Knowledge Base", use_container_width=True):
+                    try:
+                        # Read file content based on type
+                        file_content = ""
+                        if uploaded_file.type == "text/plain" or uploaded_file.name.endswith('.md'):
+                            file_content = uploaded_file.read().decode("utf-8")
+                        elif uploaded_file.name.endswith('.pdf'):
+                            try:
+                                import PyPDF2
+                                pdf_reader = PyPDF2.PdfReader(uploaded_file)
+                                for page in pdf_reader.pages:
+                                    file_content += page.extract_text() + "\n"
+                            except ImportError:
+                                st.error("PDF support requires PyPDF2. Add 'PyPDF2' to requirements.txt")
+                                file_content = ""
+                        elif uploaded_file.name.endswith('.docx'):
+                            try:
+                                import docx
+                                doc = docx.Document(uploaded_file)
+                                file_content = "\n".join([para.text for para in doc.paragraphs])
+                            except ImportError:
+                                st.error("DOCX support requires python-docx. Add 'python-docx' to requirements.txt")
+                                file_content = ""
+                        
+                        if file_content.strip():
+                            retriever = get_retriever()
+                            chunks = retriever.add_document(file_content)
+                            if chunks > 0:
+                                st.success(f"✓ Uploaded '{uploaded_file.name}' ({chunks} chunks)")
+                            else:
+                                st.warning("Document was empty")
+                        else:
+                            st.warning("Could not extract text from file.")
+                    except Exception as e:
+                        st.error(f"❌ Upload failed: {e}")
+            
+            st.divider()
+            
+            # Option 2: Paste content
+            st.markdown("**📝 Or Paste Content:**")
             custom_doc = st.text_area(
                 "Paste content:",
                 height=100,
